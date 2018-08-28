@@ -555,6 +555,10 @@ extension EKContentView {
             return
         }
         
+        if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
+            return
+        }
+        
         if entrance {
             inKeyboardConstraint.constant = -(keyboardAtts.height + offset.bottom)
             inKeyboardConstraint.priority = .must
